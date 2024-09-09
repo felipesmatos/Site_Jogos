@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <script src="funcoes.js"></script>
+    <title>123 Jogos</title>
+</head>
+<body>
+    <header>
+        <h1 class="Titulo">1 2 3 Jogos</h1>
+    </header>
+    <main id="idForms">
+        <label for="idNomep">Digite seu nome: </label>
+        <input type="text" name="nomeP" id="idNomep">
+        <br>
+        
+        <label>Escolha seu jogo:</label>
+        <br>
+        <input type="radio" name="tipoJogo" id="idTabuada" value="">
+        <label for="idTabuada">Tabuada Divertida</label>
+        <br>
+        <input type="radio" name="tipoJogo" id="idNumero" value="">
+        <label for="idNumero">Número Mágico</label>
+        <br>
+        <button onclick="Cadastro()">Acessar</button>
+    </main>
+
+    <div class="tabuada-bg" id="Tabuada">
+        <h2>Tabuada Divertida</h2>
+        <p id="enunciado"></p>
+        <label for="idPalpite"></label>
+        <input class="resp" type="Number" name="palpiteT" id="idPalpiteT">
+        <button onclick="Tabuada()">Palpitar</button>
+        <br>
+        <button class="fimJogoT" id="deNovo" onclick="Replay(1)">Jogar Novamente</button>
+    
+        <button class="fimJogoT" id="Menu" onclick="Menu()">Menu</button>
+    </div>
+
+    <div class="numero-bg" id="Numero">
+        <h2>Numero Mágico</h2>
+        <p>Advinhe o Número de 1 a 50!</p>
+        <input type="text" name="palpiteN" id="idpalpiteN">
+        <button onclick="Numero(document.querySelector('#idpalpiteN').value)">Verificar</button>
+        <p id="resposta"></p>
+        <button class="fimJogoN" id="deNovo" onclick="Replay(2)">Jogar Novamente</button>
+
+        <button class="fimJogoN" id="Menu" onclick="Menu()">Menu</button>
+    </div>
+    <footer>
+        <p>desenvolvido por: Felipe Silva Matos</p>
+    </footer>
+</html>
